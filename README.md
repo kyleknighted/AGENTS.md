@@ -27,6 +27,16 @@ With a well-maintained `AGENTS.md`, agents can:
 3. Remove or comment out any sections that don't apply to your project.
 4. Keep it up to date as your project evolves — treat it like any other source file.
 
+## Agent OS instructions
+
+To install and enable the included Agent OS standards:
+
+1. Copy `agent-os/standards/` into your project repository.
+2. In your root `AGENTS.md`, reference `agent-os/standards/index.yml` so agents can discover standards by domain.
+3. Customize each standard file by replacing `<!-- Fill in -->` placeholders with your project-specific details.
+
+See the standards documentation in [`agent-os/standards/README.md`](./agent-os/standards/README.md).
+
 ### Tips for a good AGENTS.md
 
 - **Be concrete.** Prefer exact commands, file paths, and enforceable rules over vague guidance.

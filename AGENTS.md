@@ -14,7 +14,7 @@ Every rule should be checkable — an agent (or a linter) should be able to tell
 - `<generated-types-file>` defines <how contract/generated types are used>; prefer reusing these over redefining shapes.
 - `<tests-dir>/` contains <test framework> specs; `<tests-dir>/helpers/` holds shared fixtures.
 - `<docs-dir>/` contains <handbook/reference>; review relevant pages before changing those areas.
-- `<standards-dir>/` contains agent-facing coding standards by domain; see `<index-file>` for the full index.
+- `agent-os/standards/` contains agent-facing coding standards by domain; see `agent-os/standards/index.yml` for the full index.
 - Build outputs land in `<build-output-dir>/`.
 - <Note any submodules, vendored packages, or auto-synced files and how they stay in sync.>
 
@@ -93,6 +93,7 @@ Include: why the naive approach fails, the correct approach, and any protocol/co
 ## Skills & Tooling Workflow <!-- optional -->
 
 - Treat installed skills/MCP servers as first-class tools; use a matching skill's instructions before ad hoc approaches.
+- Enable Agent OS by keeping `agent-os/standards/` in your repo and referencing `agent-os/standards/index.yml` from this file.
 - <Design-to-code flow, component-doc MCP servers, or other required tool workflows.>
 
 ## <Domain> PR Checklist <!-- optional; e.g. UI PR Checklist -->
