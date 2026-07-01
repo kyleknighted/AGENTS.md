@@ -1,0 +1,54 @@
+# Agent-facing coding standards index.
+# Each entry maps to a markdown file under the matching domain directory.
+# These files ship as project-agnostic SKELETONS: they encode common baseline
+# rules plus <!-- Fill in --> markers for project-specific details.
+# Delete standards that don't apply, and add new ones as the project grows.
+
+api:
+  auth-token-resolution:
+    description: Resolve an auth token before enabling data-fetching, with a test/dev fallback
+  api-client:
+    description: Route all network calls through a shared, typed API client (REST and/or GraphQL)
+  query-freshness:
+    description: Centralized stale-time tiers and refetch policy for cached queries
+  query-keys-and-mutations:
+    description: Query-key factory pattern and optimistic-update best practices
+  thin-proxy-routes:
+    description: Server route handlers as pure pass-through proxies to the backend
+  tenant-scoping:
+    description: Inject tenant/workspace scope onto requests in one central place
+ui:
+  config-objects:
+    description: Config objects over conditionals for status/severity display mapping
+  css-modules-styling:
+    description: Styling conventions, theming via CSS variables, and escape hatches
+  design-system-layering:
+    description: Layering rules between the app, a design-system wrapper, and its base library
+  empty-states:
+    description: Required empty states with title, guidance, and action for all list views
+  flex-scroll-containers:
+    description: min-height:0 trick for scrollable flex containers
+  skeleton-loading:
+    description: Content-aware skeleton loading states required for all data views
+testing:
+  authless-e2e-mode:
+    description: Auth-bypassed E2E setup with a dummy API host and local flags
+  visual-snapshots:
+    description: Visual-snapshot stabilization techniques and common flakiness sources
+  api-e2e-mocking:
+    description: Network/API interception and operation dispatch in E2E tests
+  sse-streaming-tests:
+    description: Streaming (SSE/WebSocket) test pattern using a fetch override
+  unit-test-coverage:
+    description: Unit-test coverage scope, thresholds, and conventions
+routing:
+  context-provider-composition:
+    description: App-root context/provider composition order
+  layout-portal-system:
+    description: Layout slots (sidebar, top content) filled via context portals
+  route-access-control:
+    description: Route access guards for unauthorized access
+  search-params-validation:
+    description: Schema-validated URL search params with typed serialization
+  two-tier-data-loading:
+    description: Route loader prefetch + component query hydration pattern
